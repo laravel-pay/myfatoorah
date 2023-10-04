@@ -18,6 +18,7 @@ trait HasApiError
 
         //Check for the errors
         $err = $this->getJsonErrors($json);
+
         if ($err) {
             return $err;
         }
@@ -36,7 +37,7 @@ trait HasApiError
     /**
      * Check for the json (response model) errors
      */
-    protected function getJsonErrors(object|string $json): string
+    protected function getJsonErrors(object|string|null $json): string
     {
 
         if (isset($json->ValidationErrors) || isset($json->FieldsErrors)) {

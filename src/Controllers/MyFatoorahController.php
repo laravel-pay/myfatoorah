@@ -1,11 +1,13 @@
 <?php
 
+namespace LaravelPay\MyFatoorah\Controllers;
+
 use Illuminate\Http\Response;
 use LaravelPay\MyFatoorah\Facades\Payment;
 
 class MyFatoorahController
 {
-    public function index(): Illuminate\Http\JsonResponse
+    public function index()
     {
         try {
             $paymentMethodId = 0; // 0 for MyFatoorah invoice or 1 for Knet in test mode
@@ -41,7 +43,7 @@ class MyFatoorahController
      *
      * @return Response
      */
-    public function callback(): Illuminate\Http\JsonResponse
+    public function callback()
     {
         try {
             $data = Payment::getPaymentStatus(request('paymentId'), 'PaymentId');

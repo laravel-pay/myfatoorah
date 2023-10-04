@@ -2,7 +2,6 @@
 
 namespace LaravelPay\MyFatoorah;
 
-use LaravelPay\MyFatoorah\Facades\Payment as PaymentFacade;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -16,13 +15,14 @@ class MyFatoorahServiceProvider extends PackageServiceProvider
             ->hasConfigFile('myfatoorah');
     }
 
-    public function boot()
+    public function boot(): void
     {
-        $this->app->singleton(PaymentFacade::class, function ($app) {
+        parent::boot();
+        $this->app->singleton(Payment::class, function ($app) {
             return new Payment(
-                apiKey: ('myfatoorah.api_key'),
-                countryMode: ('myfatoorah.country_mode'),
-                isTest: ('myfatoorah.is_test'),
+                apiKey: config('myfatoorah.api_key'),
+                countryMode: config('myfatoorah.country_iso'),
+                isTest: config('myfatoorah.test_mode'),
             );
         });
     }

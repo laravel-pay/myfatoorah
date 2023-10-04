@@ -28,7 +28,7 @@ class MyFatoorahApi implements CurrencyRates
      * Constructor
      * Initiate new MyFatoorah API process
      */
-    public function __construct(string $apiKey, string $countryMode = 'KWT', bool $isTest = false, string|object $loggerObj = null, string $loggerFunc = null)
+    public function __construct(string $apiKey, string $countryMode = 'KWT', bool $isTest = false, $loggerObj = null, string $loggerFunc = null)
     {
         $mfCountries = $this->getMyFatoorahCountries();
 

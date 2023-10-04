@@ -11,7 +11,7 @@ trait HasCountries
      */
     public static function getMyFatoorahCountries(): array
     {
-        $cachedFile = dirname(__FILE__).'/../../../resource/mf-config.json';
+        $cachedFile = dirname(__FILE__).'/../../../resources/mf-config.json';
 
         if (file_exists($cachedFile)) {
             if ((time() - filemtime($cachedFile) > 3600)) {
