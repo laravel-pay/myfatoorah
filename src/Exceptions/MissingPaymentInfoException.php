@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton\Exceptions;
+namespace LaravelPay\MyFatoorah\Exceptions;
 
 use Exception;
 

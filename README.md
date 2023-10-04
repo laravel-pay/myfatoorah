@@ -1,15 +1,8 @@
-# :package_description
+# This is my package myfatoorah
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
-[![Total Downloads](https://img.shields.io/packagist/dt/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
-<!--delete-->
----
-This repo can be used to scaffold a Laravel Pay package. Follow these steps to get started:
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/laravel-pay/myfatoorah.svg?style=flat-square)](https://packagist.org/packages/laravel-pay/myfatoorah)
+[![Total Downloads](https://img.shields.io/packagist/dt/laravel-pay/myfatoorah.svg?style=flat-square)](https://packagist.org/packages/laravel-pay/myfatoorah)
 
-1. Press the "Use this template" button at the top of this repo to create a new repo with the contents of this skeleton.
-2. Run "php ./configure.php" to run a script that will replace all placeholders throughout all the files.
----
-<!--/delete-->
 This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
 
 ## Installation
@@ -17,20 +10,20 @@ This is where your description should go. Limit it to a paragraph or two. Consid
 You can install the package via composer:
 
 ```bash
-composer require :vendor_slug/:package_slug
+composer require laravel-pay/myfatoorah
 ```
 
 You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --tag=":package_slug-migrations"
+php artisan vendor:publish --tag="myfatoorah-migrations"
 php artisan migrate
 ```
 
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag=":package_slug-config"
+php artisan vendor:publish --tag="myfatoorah-config"
 ```
 
 This is the contents of the published config file:
@@ -43,14 +36,14 @@ return [
 Optionally, you can publish the views using
 
 ```bash
-php artisan vendor:publish --tag=":package_slug-views"
+php artisan vendor:publish --tag="myfatoorah-views"
 ```
 
 ## Usage
 
 ```php
-$variable = new VendorName\Skeleton();
-echo $variable->echoPhrase('Hello, VendorName!');
+$myFatoorah = new LaravelPay\MyFatoorah();
+echo $myFatoorah->echoPhrase('Hello, LaravelPay!');
 ```
 
 ## Testing
@@ -73,7 +66,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [:author_name](https://github.com/:author_username)
+- [Elsayed Kamal](https://github.com/laravel-pay)
 - [All Contributors](../../contributors)
 
 ## License
