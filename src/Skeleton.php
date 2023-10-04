@@ -8,8 +8,8 @@ use VendorName\Skeleton\Common\Traits\HasRequiredFields;
 
 class Skeleton implements RequiredFields
 {
-    use HasRequiredFields;
     use HasHandelRedirects;
+    use HasRequiredFields;
 
     public function __construct()
     {
